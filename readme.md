@@ -17,7 +17,7 @@ This is 100% reliable regardless of field naming conventions.
 
 Falls back to field-name heuristics + FMT format char `L` for logs that lack FMTU messages (older ArduPilot firmware).
 
-## Usage
+## Usage of normal version
 
 ```bash
 python anonymize_binlog.py <input.bin> [output.bin] [options]
@@ -41,3 +41,11 @@ python anonymize_binlog.py flight.bin anon.bin --seed 42
 python anonymize_binlog.py flight.bin --offset-lat 1.5 --offset-lon -0.8
 python anonymize_binlog.py flight.bin --dry-run -v
 ```
+
+## Usage of GUI Version
+
+1. Click **Browse…** next to Input and select your `.bin` log file
+2. Output path is auto-filled as `yourlog_anon.bin` — change if needed
+4. Click **▶ Anonymize**
+
+Offsets are random by-default, but manual offsets can be added using the fields below.
